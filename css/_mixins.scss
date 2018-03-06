@@ -1,0 +1,33 @@
+
+ @mixin large(){
+     @media screen and (max-width: 1199px) {
+        @content;
+    }      
+}
+
+ @mixin medium(){
+    @media screen and (max-width: 991px) {
+        @content;
+    }      
+}
+
+@mixin small(){
+    @media screen and (max-width: 767px) {
+        @content;
+    }      
+}
+
+@mixin extraSmall(){
+    @media screen and (max-width: 575px) {
+        @content;
+  }
+}
+
+@mixin bannerText {
+    font-family: 'Artifika', serif;
+    font-size: $fontSizeTwo;
+    font-weight: $fontWeight700;
+    color: $sliderTextColor;
+    margin-bottom: 90px;
+    text-align: left;
+}

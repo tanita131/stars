@@ -1,0 +1,79 @@
+.about-body {
+    background: #FBF8F8;
+    overflow: visible;
+}
+
+.about-hero {
+    width: 100%;
+    height: 400px;
+    opacity: 0.5;
+    filter: grayscale(50%);
+}
+
+.about-figure {
+    position: relative;
+    height: auto;
+}
+
+.about-figure h2 {
+    font-size: 65px;
+    font-weight: 700;
+    color: #285f8f;
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+}
+
+h3 {
+    font-size: 30px;
+    color: pink;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+hr.style-two {
+    margin-top: 50px;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.95), rgba(255, 0, 0, 0.2));
+}
+
+footer {
+    margin-top: 50px;
+    color: #fff;
+}
+
+@include medium {
+    body {
+        font-size: 14px;
+    }
+    .about-hero {
+        height: 300px;
+    }
+    .about-figure h2 {
+        font-size: 55px;
+        font-weight: 700;
+        color: #285f8f;
+        position: absolute;
+        top: 50%;
+        left: 18%;
+        transform: translate(-50%, -50%);
+    }
+    h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+}
+
+@include extraSmall {
+      .about-figure h2 {
+        font-size: 40px;
+        font-weight: 700;
+        color: #285f8f;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

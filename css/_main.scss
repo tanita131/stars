@@ -1,0 +1,112 @@
+.navbar-custom {
+    background-color: #3B1302;
+}
+
+.navbar-toggle {
+    background-color: peru;
+}
+
+.contenedor_tarjeta {
+    padding: 0;
+    margin: 0;
+    overflow: hidden; // opacity: 0.5;
+}
+
+// .contenedor_tarjeta a {
+//     display: inline-block;
+// }
+.contenedor_tarjeta:hover figure {
+    -webkit-transform: perspective(600px) rotateY(180deg);
+    -ms-transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(180deg);
+    -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.26);
+}
+
+figure {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    transition: all ease 1.5s;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(0deg);
+}
+
+figure .frontal,
+figure .trasera {
+    width: 100%;
+    height: 100%; // border-radius: 5px;
+    transition: all ease 1.5s;
+}
+
+figure .frontal {
+    display: block;
+}
+
+figure .trasera {
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    color: #fff;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_tarjeta:nth-child(1) figure .trasera {
+    background: url("../img/chocolate1.jpg");
+    background-position: 50% 50%;
+    zoom: 70%;
+}
+
+.contenedor_tarjeta:nth-child(2) figure .trasera {
+    background: url("../img/chocolate2.jpg");
+    background-position: 50% 50%;
+    zoom: 92%;
+}
+
+.contenedor_tarjeta:nth-child(3) figure .trasera {
+    background: url("../img/chocolate3.jpg");
+    background-position: 90% 10%;
+    zoom: 80%;
+}
+
+.contenedor_tarjeta:nth-child(4) figure .trasera {
+    background: url("../img/chocolate4.jpg");
+    background-position: 50% 50%;
+}
+
+figure .trasera p {
+    color: #fff;
+    font-weight: normal;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+
+/*----MEDIA QUERIES ---*/
+
+@include large {}
+
+@include medium {
+    main {
+        padding-top: 40px;
+    }
+    figure .trasera {
+        backface-visibility: hidden; // transform: perspective(600px) rotateY(0deg);
+    }
+    .contenedor_tarjeta:hover figure {
+        // transform: perspective(600px) rotateY(0deg);
+    }
+}
+
+@include small {}
+
+@include extraSmall {}

@@ -1,0 +1,23 @@
+footer {
+    background: #5d5b5b;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer .disclaimer {
+    font-size: $fontSizeOne;
+    font-weight: 700;
+    text-decoration: $textDeco;
+}
+
+/*----MEDIA QUERIES ---*/
+
+@include extraSmall {
+    footer .disclaimer {
+        font-size: 15px;
+        font-weight: normal;
+    } 
+  }

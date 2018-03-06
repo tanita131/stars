@@ -1,0 +1,122 @@
+.contact-body {
+    background: #FBF8F8;
+    overflow: visible;
+}
+
+.contact-hero {
+    width: 100%;
+    height: 400px;
+    opacity: 0.5;
+    filter: grayscale(50%);
+}
+
+.contact-figure {
+    position: relative;
+    height: auto;
+}
+
+.contact-figure h2 {
+    font-size: 65px;
+    font-weight: 700;
+    color: #285f8f;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+
+/****** CONTACT INFORMATION*******/
+
+.mapa {
+    margin-top: 50px;
+}
+
+
+/* ------- FOOTER -----------*/
+
+footer p {
+    font-size: 15px;
+}
+
+.redes-sociales {
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.redes-sociales .icono {
+    width: 90px;
+    height: 90px;
+    font-size: 30px;
+    line-height: 90px;
+    color: #fff;
+    text-align: center;
+    background: #cbcbcb;
+    display: inline-block;
+    margin: 0px 20px;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: all .3s ease;
+}
+
+.redes-sociales .twitter {
+    background: #1da1f2;
+}
+
+.redes-sociales .instagram {
+    background: #833ab4;
+}
+
+.redes-sociales .facebook {
+    background: #3b5998;
+}
+
+
+/**************Media Queries*************/
+
+@include medium {
+   
+    .contact-hero {
+        height: 300px;
+    }
+    .contact-figure h2 {
+        font-size: 55px;
+        font-weight: 700;
+        color: #285f8f;
+        position: absolute;
+        top: 50%;
+        left: 18%;
+        transform: translate(-50%, -50%);
+    }
+    h3 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+@include extraSmall {
+    .contact-figure h2 {
+        font-size: 40px;
+        font-weight: 700;
+        color: #285f8f;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+      .redes-sociales {
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
+    .redes-sociales .icono {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        line-height: 50px;
+        margin: 0px 10px;
+    }
+    footer p {
+        font-size: 10px;
+    }
+}
+
